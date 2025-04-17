@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Fork Eatery</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap">
+  <link rel="stylesheet" href="./style/styles.css" />
+  <script type="module" src="js/home.js"></script>
+  <script type="module" src="js/menu.js"></script>
+  <script type="module" src="js/reservation.js"></script>
+  <script type="module" src="js/order.js"></script>
+  <script type="module" src="js/contact.js"></script>
+  <script type="module" src="js/about.js"></script>
+  <script type="module" src="js/specials.js"></script>
+  <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script> -->
+</head>
+<body>
+  <header id="home">
+    <nav>
+      <div class="logo">
+        <span class="icon">🍴🍽️</span>
+        <h1>Deep Fork Eatery</h1>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reservation">Reservations</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#specials">Specials</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h2>Welcome to Deep Fork Eatery</h2>
+          <p>Farm-to-table freshness with every bite</p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- Menu Module -->
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <div class="category">
+        <h3>Appetizers</h3>
+        <ul><li>Bruschetta</li><li>Stuffed Mushrooms</li></ul>
+      </div>
+      <div class="category">
+        <h3>Main</h3>
+        <ul><li>Grilled Salmon</li><li>Ribeye Steak</li></ul>
+      </div>
+      <div class="category">
+        <h3>Desserts</h3>
+        <ul><li>Cheesecake</li><li>Tiramisu</li></ul>
+      </div>
+    </section>
+
+    <!-- Reservation Module -->
+    <section id="reservation">
+      <h2>Reserve a Table</h2>
+      <form id="reservation-form">
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="date" required />
+        <input type="time" required />
+        <input type="number" placeholder="Guests" min="1" required />
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <!-- Order Mock Module -->
+    <section id="order">
+      <h2>Order Online</h2>
+      <div class="menu-item">
+        <span>Grilled Salmon</span>
+        <button data-add="Grilled Salmon">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <span>Cheesecake</span>
+        <button data-add="Cheesecake">Add to Cart</button>
+      </div>
+      <div>
+        <h3>Your Order</h3>
+        <ul id="cart"></ul>
+        <button data-submit>Submit Order</button>
+      </div>
+    </section>
+
+    <!-- Contact Module -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="map" style="width: 50%; height: 300px;"></div>
+      <p>Business Hours: Mon–Sat: 11am – 10pm | Sun: Closed</p>
+    </section>
+
+    <!-- About Module -->
+    <section id="about">
+      <h2>Our Story</h2>
+      <p>Founded in 2020, Deep Fork Eatery brings local flavors to life with our passionate team of chefs and staff.</p>
+      <h3>Meet the Team</h3>
+      <ul>
+        <li>Chef Mario – Executive Chef</li>
+        <li>Samantha – General Manager</li>
+      </ul>
+    </section>
+
+    <!-- Specials Module -->
+    <section id="specials">
+      <h2>Specials & Events</h2>
+      <ul>
+        <li>Wine Wednesdays – 50% off all bottles</li>
+        <li>Live Jazz Fridays – 7pm to 10pm</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deep Fork Eatery</p>
+  </footer>
+</body>
+</html>

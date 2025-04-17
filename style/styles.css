@@ -1,0 +1,180 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+  }
+  
+  header {
+    background-color: #8B0000; /* Deep Red */
+    color: #FFFFFF;
+    padding: 20px 0;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  header .logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  
+  header ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  header ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  header ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .hero { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80vh;
+    position: relative;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), #8B0000 60%),
+                url('/images/brooke-lark-08bOYnH_r_E-unsplash.jpg') no-repeat left center;
+    background-size: cover;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    padding:  2rem;
+  }
+  
+  .hero-overlay {
+    position: relative;
+    max-width: 50%;
+  }
+  
+  .hero-content {
+    z-index: 2;
+    color: #FFFFFF;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      background: #8B0000;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-overlay {
+      max-width: 100%;
+    }
+  }
+  
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #eee;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+  
+  main {
+    padding: 40px 20px;
+  }
+  
+  h2 {
+    color: #8B0000; /* Deep Red */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .category {
+    margin-bottom: 20px;
+  }
+  
+  .category h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  
+  button {
+    background-color: #F5DEB3; /* Wheat */
+    color: #8B0000; /* Deep Red */
+    margin: 5px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8B0000;
+    color: #FFFFFF;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  form input, form textarea {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 1.1em;
+  }
+  
+  form button {
+    width: 50%;
+
+    padding: 12px;
+    background-color: #8B0000; /* Deep Red */
+    color: #FFFFFF;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #6A0000;
+  }
+  
+  #map {
+    width: 100%;
+    height: 300px;
+  }
+  
+  footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
