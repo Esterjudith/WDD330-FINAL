@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap">
   <link rel="stylesheet" href="./style/styles.css" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <script type="module" src="js/navbar.js"></script>
   <script type="module" src="js/home.js"></script>
   <script type="module" src="js/menu.js"></script>
   <script type="module" src="js/reservation.js"></script>
@@ -23,7 +24,8 @@
         <span class="icon">🍴🍽️</span>
         <h1>Deep Fork Eatery</h1>
       </div>
-      <ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#reservation">Reservations</a></li>

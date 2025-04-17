@@ -69,17 +69,67 @@ body {
     color: #FFFFFF;
   }
   
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8B0000;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+  
   @media (max-width: 768px) {
-    .hero {
-      background: #8B0000;
-      flex-direction: column;
-      text-align: center;
+    
+      .hamburger {
+        display: block;
+      }
+    
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #8B0000;
+        width: 100%;
+        display: none;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 999;
+      }
+    
+      .nav-links.active {
+        display: flex;
+      }
     }
   
     .hero-overlay {
       max-width: 100%;
     }
-  }
+
   
   .hero h2 {
     font-size: 2.5em;
