@@ -1,30 +1,18 @@
 export function initContact() {
-    const form = document.getElementById("contact-form");
-    if (form) {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Message sent!");
-        form.reset();
-      });
-    }
-  }
-  
-  export function initMap() {
-    const mapDiv = document.getElementById("map");
-    if (!mapDiv) return;
-  
-    const map = new google.maps.Map(mapDiv, {
-      center: { lat: 33.3528, lng: -111.7890 },
-      zoom: 15,
-    });
-  
-    new google.maps.Marker({
-      position: { lat: 33.3528, lng: -111.7890 },
-      map: map,
-      title: "Deep Fork Eatery",
-    });
-  }
-  
-  document.addEventListener("DOMContentLoaded", initContact);
-  window.initMap = initMap;
+  mapboxgl.accessToken = 'pk.eyJ1IjoianVkeWgxMjM0IiwiYSI6ImNtOWxrajYwejA2MzEya3E3OXNpdTg5dnUifQ.bK2XVze3pPd8bArTiLSKgw';
+
+  const map = new mapboxgl.Map({
+    container: 'map', 
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-111.7890, 33.3528], 
+    zoom: 14
+  });
+
+  new mapboxgl.Marker()
+    .setLngLat([-111.7890, 33.3528])
+    .setPopup(new mapboxgl.Popup().setText("Deep Fork Eatery"))
+    .addTo(map);
+}
+
+document.addEventListener("DOMContentLoaded", initContact);
   

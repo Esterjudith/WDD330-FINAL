@@ -6,6 +6,7 @@
   <title>Deep Fork Eatery</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap">
   <link rel="stylesheet" href="./style/styles.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <script type="module" src="js/home.js"></script>
   <script type="module" src="js/menu.js"></script>
   <script type="module" src="js/reservation.js"></script>
@@ -13,7 +14,7 @@
   <script type="module" src="js/contact.js"></script>
   <script type="module" src="js/about.js"></script>
   <script type="module" src="js/specials.js"></script>
-  <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script> -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 </head>
 <body>
   <header id="home">
@@ -58,19 +59,21 @@
         <h3>Desserts</h3>
         <ul><li>Cheesecake</li><li>Tiramisu</li></ul>
       </div>
+      <a href="#home" class="scroll-link">⬆ Back to Home</a>
     </section>
 
     <!-- Reservation Module -->
     <section id="reservation">
       <h2>Reserve a Table</h2>
       <form id="reservation-form">
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="date" required />
-        <input type="time" required />
-        <input type="number" placeholder="Guests" min="1" required />
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="date" id="date" required />
+        <input type="time" id="time" required />
+        <input type="number" id="guests" placeholder="Guests" min="1" required />
         <button type="submit">Book Now</button>
       </form>
+      <a href="#home" class="scroll-link">⬆ Back to Home</a>
     </section>
 
     <!-- Order Mock Module -->
@@ -89,6 +92,7 @@
         <ul id="cart"></ul>
         <button data-submit>Submit Order</button>
       </div>
+      <a href="#home" class="scroll-link">⬆ Back to Home</a>
     </section>
 
     <!-- Contact Module -->
@@ -100,8 +104,9 @@
         <textarea placeholder="Your message"></textarea>
         <button type="submit">Send</button>
       </form>
-      <div id="map" style="width: 50%; height: 300px;"></div>
+      <div id="map" style="height: 400px; width: 50%; margin-top: 1rem;"></div>
       <p>Business Hours: Mon–Sat: 11am – 10pm | Sun: Closed</p>
+      <a href="#home" class="scroll-link">⬆ Back to Home</a>
     </section>
 
     <!-- About Module -->
@@ -113,6 +118,7 @@
         <li>Chef Mario – Executive Chef</li>
         <li>Samantha – General Manager</li>
       </ul>
+      <a href="#home" class="scroll-link">⬆ Back to Home</a>
     </section>
 
     <!-- Specials Module -->
@@ -123,6 +129,7 @@
         <li>Live Jazz Fridays – 7pm to 10pm</li>
       </ul>
     </section>
+    <a href="#home" class="scroll-link">⬆ Back to Home</a>
   </main>
 
   <footer>
